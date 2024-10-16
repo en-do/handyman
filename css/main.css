@@ -5842,6 +5842,9 @@ section .heading h2, section .heading .h2, section .heading h3, section .heading
   font-weight: 800;
   text-transform: uppercase; }
 
+section.list {
+  background: #f5f5f5; }
+
 @media (min-width: 576px) {
   section .heading h2, section .heading .h2, section .heading h3, section .heading .h3 {
     font-size: 2.6rem; } }
@@ -5906,7 +5909,7 @@ section .heading h2, section .heading .h2, section .heading h3, section .heading
 .service-list .service-item {
   font-size: 1.25rem;
   font-weight: 600;
-  background: #eaeaea;
+  background: linear-gradient(#dedede2b 30%, #dededec2 100%);
   padding: 1.5rem 2rem;
   border-radius: 0.25rem; }
 
@@ -5935,6 +5938,8 @@ section .heading h2, section .heading .h2, section .heading h3, section .heading
     list-style: none;
     padding: 0.25rem;
     width: 100%; }
+    .portfolio-wrapper li.item-end {
+      width: 100%; }
   .portfolio-wrapper .grid-item {
     opacity: 1;
     overflow: hidden; }
@@ -5969,11 +5974,15 @@ section .heading h2, section .heading .h2, section .heading h3, section .heading
 
 @media (min-width: 576px) {
   .portfolio-wrapper li {
-    width: 50%; } }
+    width: 50%; }
+    .portfolio-wrapper li.item-end {
+      width: 25%; } }
 
 @media (min-width: 992px) {
   .portfolio-wrapper li {
-    width: 25%; } }
+    width: 25%; }
+    .portfolio-wrapper li.item-end {
+      width: 12.5%; } }
 
 @media (min-width: 992px) {
   .portfolio-wrapper .grid-item figure figcaption {

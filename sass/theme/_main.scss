@@ -1,0 +1,230 @@
+#wrapper {
+  min-width: 330px;
+}
+
+section {
+  .heading {
+    h2, h3 {
+      color: #1d1d1b;
+      font-size: 2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .heading {
+      h2, h3 {
+        font-size: 2.6rem;
+      }
+    }
+  }
+}
+
+.main {
+  padding: 8rem 0 10rem;
+
+  .heading {
+    h1 {
+      color: #1d1d1b;
+      font-size: 5rem;
+      line-height: 0.9;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .stroke {
+      color: transparent;
+      -webkit-text-stroke: 2px #000;
+    }
+  }
+
+  .wrap-image {
+    width: 300px;
+    height: 300px;
+    position: relative;
+    animation: morph 8s ease-in-out infinite;
+    background-blend-mode: multiply;
+    -webkit-box-shadow: inset 0 0 0 18px #00a092; // rgba(255,255,255,.8)
+    -moz-box-shadow: inset 0 0 0 18px #00a092;
+    box-shadow: inset 0 0 0 18px #00a092;
+
+    .image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 80%;
+
+      background-image: url('/images/logo.svg');
+    }
+  }
+
+  @keyframes morph {
+    0% {
+      border-radius:60% 40% 30% 70%/60% 30% 70% 40%
+    }
+    50% {
+      border-radius:30% 60% 70% 40%/50% 60% 30% 60%
+    }
+    100% {
+      border-radius:60% 40% 30% 70%/60% 30% 70% 40%
+    }
+  }
+
+  .position {
+    color: #fff;
+    font-weight: 700;
+    background-color: #404144;
+    border-radius: 0.25rem;
+    padding: 0.65rem 2rem;
+    display: inline-block;
+    text-transform: uppercase;
+  }
+
+  @include media-breakpoint-down(md) {
+    .wrap-image {
+      margin: 0 auto 2rem auto;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    .heading {
+      h1 {
+        font-size: 6.2rem;
+        line-height: 0.9;
+      }
+    }
+
+    .detail {
+      max-width: 350px;
+      margin-left: 2rem;
+    }
+  }
+}
+
+.service-list {
+  .service-item {
+    font-size: 1.25rem;
+    font-weight: 600;
+    background: #eaeaea;
+    padding: 1.5rem 2rem;
+    border-radius: 0.25rem;
+  }
+}
+
+.portfolio-filter {
+  .nav-link {
+    color: #00a092;
+    @include transition(0.35s);
+
+    &:hover {
+      color: #2f3541;
+    }
+
+    &.active {
+      span {
+        position: relative;
+
+        &:before {
+          content: "";
+          width: 100%;
+          border-bottom: 2px solid #00a092;
+          display: inline-block;
+          position: absolute;
+          bottom: -3px;
+        }
+      }
+    }
+  }
+}
+
+.portfolio-wrapper {
+  padding: 0;
+  margin: 0;
+
+  li {
+    list-style: none;
+    padding: 0.25rem;
+    width: 100%;
+  }
+
+  .grid-item {
+    opacity: 1;
+    overflow: hidden;
+
+    figure {
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+      border-radius: 0.35rem;
+
+      .image {
+        transition: all 0.3s ease 0s;
+        -webkit-transition: all 0.3s ease 0s;
+        -moz-transition: all 0.3s ease 0s;
+        -ms-transition: all 0.3s ease 0s;
+        -o-transition: all 0.3s ease 0s;
+
+        img {
+          cursor: pointer;
+          display: block;
+          opacity: 1;
+          width: 100%;
+          transition: all 0.3s ease 0s;
+        }
+      }
+
+      figcaption {
+        color: $white;
+        background: #2f3541;
+        position: absolute;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+        bottom: -999px;
+
+        @include transition(bottom 0.6s ease);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .portfolio-wrapper {
+    li {
+      width: 50%;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .portfolio-wrapper {
+    li {
+      width: 25%;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .portfolio-wrapper {
+    .grid-item {
+      figure {
+        figcaption {
+          opacity: 0;
+          display: none;
+        }
+
+        &:hover {
+          figcaption {
+            bottom: 0;
+            opacity: 1;
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

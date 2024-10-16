@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "scripts": {
+    "style": "node-sass --watch sass/main.scss css/main.css"
+  },
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

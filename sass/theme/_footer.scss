@@ -1,0 +1,14 @@
+footer {
+  color: $white;
+  background-color: #2f3541; // #333
+  padding: 2rem 0 2.5rem;
+
+  a {
+    color: #00a092;
+
+    &:hover {
+      text-decoration: none;
+      @include transition(0.4s);
+    }
+  }
+}

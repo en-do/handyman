@@ -5832,6 +5832,8 @@ header {
   padding: 1rem 0; }
   header .nav-link {
     color: #00a092; }
+  header .location {
+    color: #00a092; }
 
 #wrapper {
   min-width: 330px; }

@@ -1,6 +1,6 @@
 {
   "name": "Your master",
-  "short_name": "handyman",
+  "short_name": "Hanyk",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#00a192",
+  "background_color": "#00a192",
   "display": "standalone"
 }
